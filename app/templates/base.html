@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+{%if title%}
+	<title>{{title}} - WanjilasBlog</title>
+	{%else%}
+	<title> Welcome to WanjilasBlog</title>
+{% endif %}
+
+
+</head>
+<body>
+<div> WanjilasBlog: <a href="/index">Home</a></div>
+<hr>
+{% block content%}{%endblock%}
+
+</body>
+</html>
