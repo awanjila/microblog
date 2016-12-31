@@ -10,9 +10,17 @@
 
 </head>
 <body>
-<div> WanjilasBlog: <a href="/index">Home</a><br> 
-<a href="/login">Sign in</a> </div>
+<div> WanjilasBlog: <a href="/index">Home</a></div>
 <hr>
+{% with messages = get_flashed_messages()%}
+	{%if messages %}
+	<ul>
+		{%for message in messages %}
+		<li>{{ message }}</li>
+		{% endfor%}
+	</ul>
+	{%endif%}
+{%endwith%}
 {% block content%}{%endblock%}
 
 </body>
